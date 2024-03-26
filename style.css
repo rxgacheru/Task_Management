@@ -1,0 +1,28 @@
+body{
+  background: url(img1.png) 
+  
+}
+
+/*.taskMnger {
+  background-color: aqua;
+} */
+
+.taskss {
+  text-align: center;
+  background-color: aliceblu;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center0;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright {
+  text-decoration: underline;
+}

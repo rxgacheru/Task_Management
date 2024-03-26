@@ -19,7 +19,7 @@ fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
     "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjQwMzI1MTAwMzEx",
     "Timestamp": "20240325100311",
     "TransactionType": "CustomerPayBillOnline",
-    "Amount": amount,
+    "Amount": 800,
     "PartyA": 254708855315,
     "PartyB": 174379,
     "PhoneNumber": phoneNumber,

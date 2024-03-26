@@ -1,13 +1,19 @@
-.footer{
-  background-color: 011d2a;
-  bottom: 10px;
-  text-align: center;
-  color: white;
+.footer {
+  background-color: rgba(14, 114, 201, 0.651);
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  place-items: center0;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
-.card{
-  background-color: #d3d8d6;
+.footer__copyright {
+  text-decoration: underline;
 }
+/* .card{
+  background-color: #d3d8d6;
+} */
 
 body{
   background: url(img1.png) 

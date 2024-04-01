@@ -31,6 +31,9 @@
           <li class="nav-item">
             <a class="nav-link" href="Contact.html">Contact Us</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Sign Up</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -43,29 +46,29 @@
 <div class="container">
   <body>
     <h1 class="hh1">Contact Us </h1>
-    <div class="containerfont-family-base fw-bold sticky-top  ">
-      <form onsubmit="sendEmail(); reset(); return false;">
+    <div class="container font-family-base fw-bold sticky-top  ">
+      <form action="https://formspree.io/f/mleqpger" method="POST" >
         <div class="row">
           <div class="col">
-            <label for="exampleInputPassword1" class="form-label">First Name</label>
-            <input type="text" class="form-control bg-body-tertiary" placeholder="First name" aria-label="First name" required>
+            <label for="exampleInputPassword1" class="form-label" name="Name">First Name</label>
+            <input type="text" class="form-control bg-body-tertiary" placeholder="First name" aria-label="First name" required name="fName">
           </div><br>
   
           <div class="col">
             <label for="exampleFormControlTextarea1" class="form-label">Last Name</label>
-            <input type="text" class="form-control bg-body-tertiary" placeholder="Last name" aria-label="Last name">
+            <input type="text" class="form-control bg-body-tertiary" placeholder="Last name" aria-label="Last name" required name="lName">
           </div><br>
   
         </div> 
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label" placeholder="Your email...">Email address</label>
-          <input type="email" class="form-control bg-body-tertiary" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+          <input type="email" class="form-control bg-body-tertiary" id="exampleInputEmail1" aria-describedby="emailHelp" required name="Message">
           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div><br>
   
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Subject</label>
-          <textarea class="form-control bg-body-tertiary" id="exampleFormControlTextarea1" rows="6" placeholder="Message..." required></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label" name="Message">Subject</label>
+          <textarea class="form-control bg-body-tertiary" id="exampleFormControlTextarea1" rows="6" placeholder="Message..." required name="Text"></textarea>
         </div><br>
   
         <div class="d-grid gap-2">
@@ -74,7 +77,7 @@
       </form>
     </div>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!--  <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function sendEmail() {
         Email.send({
@@ -90,7 +93,7 @@
 );
 
       }
-    </script>
+    </script> -->
   </body><br><br>
   
     <footer class="footer">

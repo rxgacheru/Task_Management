@@ -107,3 +107,8 @@ cancelledBtn.addEventListener("click", () => {
   confirmEl.style.display = "none";
   taskManagerContainer.classList.remove("overlay");
 });
+
+
+document.getElementById('root').innerHTML=items.map((item)=>{
+  
+})

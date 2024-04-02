@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { getAuth, googleAuthProvider, signInWitPopup} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyAPqHXTu5nnEJPZGJZugZwMNZrDrvnY_kY",
@@ -30,10 +30,10 @@ googleLogin.addEventListener("click", function() {
 })
 function updateUserProfile(user) {
     const userName = user.displayName;
-    const userEmail = user.email;    
+    const userEmail = user.email;
     const userProfilePicture = user.photoURL;
     document.getElementById("userName").textContext = userName;
     document.getElementById("userEmail").textContext = userEmail;
     document.getElementById("userProfilePicture").src = userProfilePicture;
 }
-updateUserProfile();
+updateUserProfile()

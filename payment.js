@@ -19,10 +19,10 @@ fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
     "Password": "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMjQwMzI1MTAwMzEx",
     "Timestamp": "20240325100311",
     "TransactionType": "CustomerPayBillOnline",
-    "Amount": document.getElementById("paymentAmount").value,
+    "Amount": amount,
     "PartyA": 254708855315,
     "PartyB": 174379,
-    "PhoneNumber": document.getElementById("customerPhoneNumber").value, 
+    "PhoneNumber": `254${phone}`, 
     "CallBackURL": "https://mydomain.com/path",
     "AccountReference": "CompanyXLTD",
     "TransactionDesc": "Payment of"

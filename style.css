@@ -29,7 +29,7 @@ header {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #008080;
   width: 500px;
   margin: 20px auto;
   padding: 3rem 2rem;
@@ -104,7 +104,7 @@ button[type="submit"] {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  background-color: #ffffff;
+  background-color: #008080;
   box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
   padding: 16px;
   top: 1rem;
@@ -116,11 +116,11 @@ button[type="submit"] {
 }
 
 .taskCard.completed {
-  background: linear-gradient(to bottom right, #B0DB7D 40%, #99DBB4 100%);
+  background: linear-gradient(to bottom right, #7daedb 40%, #99DBB4 100%);
 }
 
 .taskCard.pending {
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  background: linear-gradient(to bottom left, #f7d129 40%, #FFC39E 100%);
 }
 
 .taskCard:hover {

@@ -112,3 +112,10 @@ cancelledBtn.addEventListener("click", () => {
 document.getElementById('root').innerHTML=items.map((item)=>{
   
 })
+
+
+const checkbox =
+document.getElementById('checkbox');
+checkbox.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+});

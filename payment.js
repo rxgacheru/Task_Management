@@ -25,7 +25,7 @@ fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
     "PhoneNumber": document.getElementById("customerPhoneNumber").value, 
     "CallBackURL": "https://mydomain.com/path",
     "AccountReference": "CompanyXLTD",
-    "TransactionDesc": "Payment of X"
+    "TransactionDesc": "Payment of"
   })
 })
  .then(response => response.text())

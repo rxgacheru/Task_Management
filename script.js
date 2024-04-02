@@ -119,3 +119,19 @@ document.getElementById('checkbox');
 checkbox.addEventListener('change', () => {
     document.body.classList.toggle('dark');
 });
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const searchInput = document.getElementById("searchInput").value;
+  const searchResults = document.getElementById("searchResults");
+
+  // Clear previous search results
+  searchResults.innerHTML = '';
+
+  // Conduct the search
+  if (searchInput === "example") {
+    searchResults.innerHTML = '<p>You searched for "example"!</p>';
+  } else {
+    searchResults.innerHTML = '<p>No results found.</p>';
+  }
+});

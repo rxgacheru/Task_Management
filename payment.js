@@ -8,6 +8,21 @@ const button = document.getElementById('triggerPayment');
  console.log(`Triggering payment for amount ${amount} to phone number ${phoneNumber}...`);
 });
 
+const generateToken = async () => {
+    try {
+        const secret = process.env.MPESA_SECRET_KEY;
+        const consumer = process.env.MPESA_CONSUMER_KEY;
+        const auth = Buffer.from(`${consumer}:${secret}`).toString("base64");
+        const response = await axios.get(MPESA_TOKEN_URL, {
+            headers: {
+                Authorization: `Basic ${auth}`,
+            },
+        });
+        return response.data.access_token;
+    } catch (error) {
+        throw new Error(error.message);
+    }
+};
 
 const date = new Date();
 const timestamp = `${date.getFullYear()}${("0" + (date.getMonth() + 1)).slice(-2)}${("0" + date.getDate()).slice(-2)}${("0" + date.getHours()).slice(-2)}${("0" + date.getMinutes()).slice(-2)}${("0" + date.getSeconds()).slice(-2)}`;

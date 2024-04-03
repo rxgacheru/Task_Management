@@ -6,10 +6,10 @@ const confirmedBtn = confirmEl.querySelector(".confirmed");
 const cancelledBtn = confirmEl.querySelector(".cancel");
 let indexToBeDeleted = null
 
-// Add event listener
+// Add event listener to the form submit event
 document.getElementById('taskForm').addEventListener('submit', handleFormSubmit);
 
-// Form submission
+// Function to handle form submission
 function handleFormSubmit(event) {
   event.preventDefault();
   const taskInput = document.getElementById('taskInput');
@@ -27,6 +27,7 @@ function handleFormSubmit(event) {
     renderTasks();
   }
 }
+
 
 function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -90,7 +91,7 @@ function renderTasks() {
   });
 }
 
-// function to delete the selected task
+
 function deleteTask(index) {
   tasks.splice(index, 1);
   saveTasks();
@@ -109,29 +110,80 @@ cancelledBtn.addEventListener("click", () => {
 });
 
 
-document.getElementById('root').innerHTML=items.map((item)=>{
-  
-})
+let availableKeywords = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'Python',
+  'Java',
+];
 
+const resultsBox = document.querySelector('result-box');
+const inputBox = document.getElementById('input-box');
 
-const checkbox =
-document.getElementById('checkbox');
-checkbox.addEventListener('change', () => {
-    document.body.classList.toggle('dark');
-});
+inputBox.onkeyup = function() {
+ let result = [];
+ let input = inputBox.value;
+ if(input.length){
+   result = availableKeywords.filter((keyword)=>{
+      return keyword.toLowerCase().includes(input.toLowerCase());
+   });
+   console.log(result);
+ }
+ display(result);
 
-document.getElementById("searchForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  const searchInput = document.getElementById("searchInput").value;
-  const searchResults = document.getElementById("searchResults");
+ if(!result.lenght){
+   resultsBox.innerHTML = '';
+ }
+}
 
-  // Clear previous search results
-  searchResults.innerHTML = '';
+function display(reults){
+ const content = result.map((list)=>{
+   return "<li onclick=selectInput(this)>" + list + "</li>";
+ });
+console.log(results)
+ resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>"
+}
 
-  // Conduct the search
-  if (searchInput === "example") {
-    searchResults.innerHTML = '<p>You searched for "example"!</p>';
-  } else {
-    searchResults.innerHTML = '<p>No results found.</p>';
+function selectInput(list){
+ inPutBox.value = list.innerHTML;
+ resultsBox.innerHTML = '';
+} 
+
+let availabeKeywords = [
+  'Task1',
+  'Task2',
+  'Task3',
+  'Task4',
+];
+
+const resultBox = document.querySelector('.results-box');
+const inputBox = document.getElementBById('input-box');
+inputBox.onkeyup = function(){
+  let result = [];
+  let input = inputBox.value;
+  if(input.length){
+    result = availableKeywords.filter((Keyword)=>{
+      return keyword.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log(result);
   }
-});
+  display(result);
+
+  if(!result.length){
+    resultsBox.innerHTML = '';
+  }
+}
+
+function display(result){
+  const content = result.map((list)=>{
+    return "<li onclick=selectInput(this)>" + list + "</li>";
+  });
+
+  resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+}
+
+function selectInput(list){
+  inputBox.value = list.innerHTML;
+  resultsBox.innerHTML ='';
+}

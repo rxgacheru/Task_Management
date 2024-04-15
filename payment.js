@@ -1,4 +1,4 @@
-
+/*
 const button = document.getElementById('triggerPayment');
     button.addEventListener('click', () => {
   
@@ -60,10 +60,10 @@ fetch("https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", {
 })
  .then(response => response.text())
  .then(result => console.log(result))
- .catch(error => console.log(error)); 
+ .catch(error => console.log(error)); */
 
 
- /*const express = require("express");
+ const express = require("express");
 const app = express();
 require("dotenv").config();
 const cors = require("cors");
@@ -140,4 +140,4 @@ app.post("/stk", async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-}); */
+}); 

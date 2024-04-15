@@ -28,14 +28,16 @@ function handleFormSubmit(event) {
   }
 }
 
-
+// Function to save tasks to local storage
 function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+// Initial rendering of tasks
 renderTasks();
 
 
+// Function to render tasks
 function renderTasks() {
   const taskContainer = document.getElementById('taskContainer');
   taskContainer.innerHTML = '';
@@ -91,7 +93,7 @@ function renderTasks() {
   });
 }
 
-
+// function to delete the selected task
 function deleteTask(index) {
   tasks.splice(index, 1);
   saveTasks();
@@ -108,82 +110,3 @@ cancelledBtn.addEventListener("click", () => {
   confirmEl.style.display = "none";
   taskManagerContainer.classList.remove("overlay");
 });
-
-
-let availableKeywords = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'Python',
-  'Java',
-];
-
-const resultsBox = document.querySelector('result-box');
-const inputBox = document.getElementById('input-box');
-
-inputBox.onkeyup = function() {
- let result = [];
- let input = inputBox.value;
- if(input.length){
-   result = availableKeywords.filter((keyword)=>{
-      return keyword.toLowerCase().includes(input.toLowerCase());
-   });
-   console.log(result);
- }
- display(result);
-
- if(!result.lenght){
-   resultsBox.innerHTML = '';
- }
-}
-
-function display(reults){
- const content = result.map((list)=>{
-   return "<li onclick=selectInput(this)>" + list + "</li>";
- });
-console.log(results)
- resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>"
-}
-
-function selectInput(list){
- inPutBox.value = list.innerHTML;
- resultsBox.innerHTML = '';
-} 
-
-let availabeKeywords = [
-  'Task1',
-  'Task2',
-  'Task3',
-  'Task4',
-];
-
-const resultBox = document.querySelector('.results-box');
-const inputBox = document.getElementBById('input-box');
-inputBox.onkeyup = function(){
-  let result = [];
-  let input = inputBox.value;
-  if(input.length){
-    result = availableKeywords.filter((Keyword)=>{
-      return keyword.toLowerCase().includes(input.toLowerCase());
-    });
-    console.log(result);
-  }
-  display(result);
-
-  if(!result.length){
-    resultsBox.innerHTML = '';
-  }
-}
-
-function display(result){
-  const content = result.map((list)=>{
-    return "<li onclick=selectInput(this)>" + list + "</li>";
-  });
-
-  resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";
-}
-
-function selectInput(list){
-  inputBox.value = list.innerHTML;
-  resultsBox.innerHTML ='';
-}

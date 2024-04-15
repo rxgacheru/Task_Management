@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #2c2c8a, #8a56c2);
+  background: linear-gradient(135deg, #a3a3ec, #bba2ee);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -69,7 +69,7 @@ h3 {
 
 button[type="submit"] {
   background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  background-image: linear-gradient(315deg, #fbff00 0%, #ec9f05 74%);
   color: #333;
   padding: 15px 7px;
   border: none;
@@ -82,7 +82,7 @@ button[type="submit"] {
 
 button:hover {
   background-color: #a4508b;
-background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+background-image: linear-gradient(326deg, #6950a4 0%, #160a87 74%);
 color: #fff;
 }
 

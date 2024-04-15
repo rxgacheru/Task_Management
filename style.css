@@ -1,21 +1,6 @@
-.footer {
-  background-color: rgba(14, 114, 201, 0.651);
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  place-items: center0;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__copyright {
-  text-decoration: underline;
-}
-
 body {
-  background-color: #008080;
-  background: #008080;
   font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #2c2c8a, #8a56c2);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -23,13 +8,14 @@ body {
 }
 
 header {
+  background-color: #009688;
   padding: 20px;
   text-align: center;
   color: #fff;
 }
 
 .card {
-  background-color: #008080;
+  background-color: #fff;
   width: 500px;
   margin: 20px auto;
   padding: 3rem 2rem;
@@ -93,6 +79,13 @@ button[type="submit"] {
   width: 5rem;
 }
 
+
+button:hover {
+  background-color: #a4508b;
+background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+color: #fff;
+}
+
 #taskContainer {
   display: flex;
   flex-wrap: wrap;
@@ -104,7 +97,7 @@ button[type="submit"] {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  background-color: #008080;
+  background-color: #ffffff;
   box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
   padding: 16px;
   top: 1rem;
@@ -116,11 +109,11 @@ button[type="submit"] {
 }
 
 .taskCard.completed {
-  background: linear-gradient(to bottom right, #7daedb 40%, #99DBB4 100%);
+  background: linear-gradient(to bottom right, #B0DB7D 40%, #99DBB4 100%);
 }
 
 .taskCard.pending {
-  background: linear-gradient(to bottom left, #f7d129 40%, #FFC39E 100%);
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
 }
 
 .taskCard:hover {
@@ -142,6 +135,10 @@ button[type="submit"] {
   color: #5e5e5e;
   letter-spacing: 1px;
 }
+
+/* =========================== */
+/*    Task button styling      */
+/* =========================== */
 
 .button-box {
   background: #FCFCFC;
@@ -174,9 +171,14 @@ button[type="submit"] {
   font-weight: 100;
   letter-spacing: 3px;
   padding-top: 5px;
+  /* color: #FCFCFC; */
   padding-bottom: 5px;
   text-transform: uppercase;
 }
+
+/* =========================== */
+/* Confirmation popup styling */
+/* =========================== */
 
 .overlay {
   position: relative;
@@ -190,6 +192,18 @@ button[type="submit"] {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .confirm {
@@ -220,7 +234,7 @@ button[type="submit"] {
   text-align: center;
   font-size: 1rem;
   margin: 0 2rem 4.5rem;
-} 
+}
 
 .confirm button {
   background: transparent;
@@ -245,88 +259,14 @@ button[type="submit"] {
   border-top: 1px solid #B4B4B4;
   right: 0;
   border-radius: 0 0 10px 0;
-} 
-
-
-.label {
-  background-color: #111;
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding: 5px;
-  justify-content: space-between;
-  border-radius: 50px;
-  height: 26px;
-  width: 50px;
 }
 
-.fa-moon {
-  color: #f1c40f;
+.confirm button:focus,
+.confirm button:hover {
+  font-weight: bold;
+  background: #EFEFEF;
 }
 
-.fa-sun {
-  color: #f39c12;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.ball {
-  background-color: #111;
-  position : absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  padding: 5px;
-  height: 26px;
-  width: 50px;
-}
-
-a.active {
-  background: #f21313;
-}
-
-button{
-  background: transparent;
-  border: 0;
-  outline: 0;
-}
-
-button .fa-solid{
-  width: 25px;
-  color: #555;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-::placeholder{
-  color: #555;
-}
-
-.result-box ul{
-  border-top: 1px solid #999;
-  padding: 15px 10px;
-}
-
-.result-box ul li{
-  list-style: none;
-  border-radius: 3px;
-  padding: 15px 10px;
-  cursor: pointer;
-}
-
-.result-box ul li:hover{
-  background: #e9f3ff;
-}
-
-.result-box{
-  max-height: 300px;
-  overflow: scroll;
-}
-
-.result-box{
-  max-height: 300px;
-  overflow-y: scroll;
+.confirm button:active {
+  background: #D6D6D6;
 }
